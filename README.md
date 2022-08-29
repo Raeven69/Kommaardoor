@@ -1,2 +1,2 @@
 # Sokken-Website
-ja
+https://raeven69.github.io/Sokken-Website/
