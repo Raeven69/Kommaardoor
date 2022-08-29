@@ -1,2 +1,2 @@
 # Sokken-Website
-https://raeven69.github.io/sunny-socks/
+https://raeven69.github.io/Sunny-Socks/
