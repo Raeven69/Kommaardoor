@@ -1,1 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
 
+.banner {
+    display: inline-block;
+    width: 100vw;
+    height: 15vh;
+    background-color: black;
+    font-weight: 600;
+}
+
+.title {
+    color: white;
+    line-height: 14vh;
+    padding-left: 50px;
+}
+
+.pages {
+    display: inline;
+}
+
+.pages li {
+    text-align: right;
+    color: white;
+    float: right;
+    line-height: 14vh;
+    margin-right: 100px;
+}
