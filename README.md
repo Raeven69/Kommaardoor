@@ -1,2 +1,2 @@
-# Sunny Socks
-https://raeven69.github.io/Sunny-Socks/
+# Kommaardoor computers
+School project kind of repo
