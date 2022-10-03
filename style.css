@@ -1,9 +1,12 @@
 body {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 800;
     margin: 0px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .header {
@@ -35,14 +38,19 @@ body {
 }
 
 .navigation {
-    display: flex;
+    display: block;
     grid-column: 3/5;
     align-items: center;
     justify-content: center;
+    align-self: center;
 }
 
 .navigation li {
+    display: inline;
     list-style: none;
+}
+
+.navigation li:not(:last-child) {
     padding-right: 80px;
 }
 
@@ -143,18 +151,12 @@ body {
 }
 
 .allProducts {
-    display: flex;
+    display: inherit;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 40px 300px 60px;
     flex-direction: row;
     justify-content: center;
-    grid-column: 1/6;
-}
-
-.productScreen {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    grid-column: 1/6;
-    flex-flow: wrap;
+    grid-column: 2/5;
 }
 
 .productItem {
@@ -163,13 +165,11 @@ body {
     grid-column: 2;
     width: 300px;
     height: 350px;
-    margin: 0px 60px 50px 60px;
 }
 
 .productsImage {
     align-self: center;
     width: 274px;
-    margin: 50px 0px 50px 0px;
 }
 
 .productsButton {
@@ -180,19 +180,6 @@ body {
     width: 100%;
     text-align: center;
     text-decoration: none;
-}
-
-.productsImage.amiga {
-    margin: 0px;
-    width: 239.5px;
-}
-
-.productsImage.amiga2 {
-    width: 242px;
-}
-
-.productsImage.amiga3 {
-    width: 340px;
 }
 
 .footer {
@@ -218,4 +205,10 @@ body {
     list-style: none;
     padding: 0px;
     font-weight: 400;
+}
+
+@media screen and (max-width: 376px) {
+    body {
+        background-color: red;
+    }
 }
