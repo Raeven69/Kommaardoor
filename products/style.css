@@ -1,0 +1,167 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 800;
+    margin: 0px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.header {
+    display: inherit;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: white;
+    grid-column: 1/6;
+    height: 80px;
+    box-shadow: 0px 5px 10px #555555;
+    padding-bottom: 5px;
+}
+
+.logoWrapper {
+    display: flex;
+    grid-column: 1/3;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.logo {
+    width: 80px;
+    vertical-align: -30px;
+}
+
+.title {
+    font-size: 25px;
+    color: red;
+}
+
+.navigation {
+    display: block;
+    grid-column: 3/5;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+.navigation li {
+    display: inline;
+    list-style: none;
+}
+
+.navigation li:not(:last-child) {
+    padding-right: 80px;
+}
+
+.products {
+    display: flex;
+    color: red;
+    grid-column: 1/3;
+    justify-self: center;
+}
+
+.productScreen {
+    display: flex;
+    grid-column: 2/5;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    column-gap: 50px;
+}
+
+.productItem {
+    display: grid;
+    grid-template-columns: 200px;
+    grid-template-rows: 1fr 3fr 1fr;
+}
+
+.productsImage {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.productsButton {
+    background-color: red;
+    text-align: center;
+    line-height: 45px;
+    text-decoration: none;
+    height: 60%;
+    color: white;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    grid-column: 1/6;
+    margin-top: 70px;
+    height: 200px;
+    background-color: #1e2a4e;
+}
+
+.footerList {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 120px;
+    height: 100%;
+    color: white;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 576px) {
+    .wrapper {
+        display: block;
+        overflow: hidden;
+    }
+
+    .header {
+        display: flex;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .logoWrapper {
+        display: inline;
+    }
+
+    .logo {
+        width: 120px;
+        vertical-align: -40px;
+    }
+
+    .title {
+        display: inline;
+        font-size: 40px;
+    }
+
+    .navigation {
+        align-self: center;
+        padding: 0px;
+    }
+
+    .products {
+        margin-left: 5px;
+    }
+
+    .productItem {
+        grid-template-columns: 400px;
+        grid-template-rows: 1fr 6fr 1fr;
+    }
+
+    .productItem:not(:last-child) {
+        margin-bottom: 100px;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        height: 600px;
+        padding-left: 5px;
+    }
+}

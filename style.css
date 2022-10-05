@@ -106,6 +106,10 @@ body {
     font-weight: 400;
 }
 
+.background {
+    display: none;
+}
+
 .bar {
     display: inherit;
     grid-template-columns: repeat(3, 1fr);
@@ -153,33 +157,72 @@ body {
 .allProducts {
     display: inherit;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 40px 300px 60px;
+    grid-template-rows: 1fr 6fr 1fr;
+    column-gap: 100px;
     flex-direction: row;
-    justify-content: center;
     grid-column: 2/5;
 }
 
-.productItem {
-    display: flex;
-    flex-direction: column;
+.productsTitle {
+    line-height: 0px;
+}
+
+.product1Title {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.product2Title {
     grid-column: 2;
-    width: 300px;
-    height: 350px;
+    grid-row: 1;
+}
+
+.product3Title {
+    grid-column: 3;
+    grid-row: 1;
 }
 
 .productsImage {
-    align-self: center;
-    width: 274px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.product1Image {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.product2Image {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.product3Image {
+    grid-column: 3;
+    grid-row: 2;
 }
 
 .productsButton {
-    align-self: center;
     background-color: red;
-    color: white;
-    padding: 10px 0px 10px 0px;
-    width: 100%;
     text-align: center;
+    line-height: 45px;
     text-decoration: none;
+    color: white;
+}
+
+.product1Button {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.product2Button {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.product3Button {
+    grid-column: 3;
+    grid-row: 3;
 }
 
 .footer {
@@ -207,8 +250,93 @@ body {
     font-weight: 400;
 }
 
-@media screen and (max-width: 376px) {
-    body {
-        background-color: red;
+@media screen and (max-width: 576px) {
+    .wrapper {
+        display: block;
+        overflow: hidden;
+    }
+
+    .header {
+        position: relative;
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        z-index: 100;
+        box-shadow: 0px 5px 10px black;
+    }
+
+    .logoWrapper {
+        display: inline;
+    }
+
+    .logo {
+        width: 120px;
+        vertical-align: -40px;
+    }
+
+    .title {
+        display: inline;
+        font-size: 40px;
+    }
+
+    .navigation {
+        align-self: center;
+        padding: 0px;
+    }
+
+    .content {
+        margin: 0px;
+        background-image: none;
+    }
+
+    .product {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .productButton {
+        width: 100%;
+    }
+
+    .background {
+        position: relative;
+        display: block;
+        margin-top: 15px;
+        width: 1000px;
+        left: -180px;
+    }
+
+    .bar {
+        display: flex;
+        flex-direction: column;
+        height: 440px;
+    }
+
+    .harold {
+        margin: 0px;
+        width: 55%;
+        align-self: center;
+    }
+
+    .products {
+        margin-left: 5px;
+    }
+
+    .allProducts {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin-left: 15%;
+    }
+
+    .productsButton:not(:last-child) {
+        margin-bottom: 100px;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        height: 600px;
+        padding-left: 5px;
     }
 }
